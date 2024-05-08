@@ -12,7 +12,7 @@ export function HomePage() {
         <h1>Star Wars Characters</h1>
       </header>
       <main>
-        <Table people={people} />
+        <Table people={people} loading={loading} />
         <Pagination
           hasPrevPage={loading || hasPrevPage}
           hasNextPage={loading || hasNextPage}

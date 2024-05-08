@@ -1,4 +1,4 @@
-export function Table({ people = [] }) {
+export function Table({ people = [], loading }) {
   return (
     <table>
       <thead>
@@ -11,6 +11,7 @@ export function Table({ people = [] }) {
           <th>Height</th>
         </tr>
       </thead>
+
       <tbody>
         {people?.map((person, key) => (
           <tr key={`${person.name}-${key}`}>
@@ -23,6 +24,11 @@ export function Table({ people = [] }) {
           </tr>
         ))}
       </tbody>
+      <tfoot>
+        <tr>
+          <td colSpan="6">{loading ? "Loading..." : ""}</td>
+        </tr>
+      </tfoot>
     </table>
   );
 }
