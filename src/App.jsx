@@ -1,8 +1,6 @@
 import './App.css'
 import {HomePage} from "./pages/home-page/home-page.jsx";
 
-
-
 function App() {
     return (
         <HomePage/>)
