@@ -26,10 +26,10 @@ persistQueryClient({
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+    <React.StrictMode>
         <QueryClientProvider client={queryClient}>
             <ReactQueryDevtools/>
+            <App/>
         </QueryClientProvider>
-        <App/>
     </React.StrictMode>,
 )
