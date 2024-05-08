@@ -14,10 +14,10 @@ export function HomePage() {
       <main>
         <Table people={people} loading={loading} />
         <Pagination
-          hasPrevPage={loading || hasPrevPage}
-          hasNextPage={loading || hasNextPage}
-          goNextPage={goNextPage}
           goPrevPage={goPrevPage}
+          hasPrevPage={hasPrevPage}
+          goNextPage={goNextPage}
+          hasNextPage={hasNextPage}
         />
       </main>
     </div>
