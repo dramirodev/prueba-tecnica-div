@@ -17,7 +17,7 @@ export const PeopleActionTypes = {
 
 function calculateNextPage(page, count) {
     const calculatedPage = page + 1
-    return calculatedPage < count ? calculatedPage : null
+    return calculatedPage <= count ? calculatedPage : null
 }
 
 function calculatePrevPage(page) {
