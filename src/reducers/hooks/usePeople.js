@@ -8,7 +8,8 @@ export function usePeople() {
         loading,
         people,
         prevPage,
-        nextPage
+        nextPage,
+        totalPages
     }, dispatch] = useReducer(PeopleReducer, PeopleInitialState);
 
     const oldPage = useRef(0);
@@ -39,6 +40,7 @@ export function usePeople() {
                     type: PeopleActionTypes.FETCH_PEOPLE_SUCCESS,
                     payload: {results: data.results, count: data.count, page: currentPage}
                 })
+
             })
             .catch(error => {
                 dispatch({type: PeopleActionTypes.FETCH_PEOPLE_ERROR, payload: error})
@@ -52,6 +54,7 @@ export function usePeople() {
         prevPage,
         nextPage,
         goNextPage,
-        goPrevPage
+        goPrevPage,
+        totalPages
     }
 }
