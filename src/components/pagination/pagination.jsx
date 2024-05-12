@@ -1,3 +1,5 @@
+import { StyledPagination } from "./ui/styles.jsx";
+
 export function Pagination({
   hasPrevPage,
   hasNextPage,
@@ -5,13 +7,13 @@ export function Pagination({
   goPrevPage,
 }) {
   return (
-    <div>
+    <StyledPagination>
       <button onClick={goPrevPage} disabled={hasPrevPage}>
         Previous
       </button>
       <button onClick={goNextPage} disabled={hasNextPage}>
         Next
       </button>
-    </div>
+    </StyledPagination>
   );
 }

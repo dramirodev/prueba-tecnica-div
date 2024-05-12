@@ -1,6 +1,9 @@
+import { StyledTable } from "./ui/styles.jsx";
+import { Loader } from "../../pages/home-page/ui/styles.jsx";
+
 export function Table({ people = [], loading }) {
   return (
-    <table>
+    <StyledTable>
       <thead>
         <tr>
           <th>Name</th>
@@ -26,9 +29,9 @@ export function Table({ people = [], loading }) {
       </tbody>
       <tfoot>
         <tr>
-          <td colSpan="6">{loading ? "Loading..." : ""}</td>
+          <td colSpan="6">{loading ? <Loader /> : ""}</td>
         </tr>
       </tfoot>
-    </table>
+    </StyledTable>
   );
 }
